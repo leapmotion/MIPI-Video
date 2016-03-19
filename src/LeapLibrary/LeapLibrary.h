@@ -22,11 +22,20 @@ private:
   std::string libname;
 
 public:
+  struct entrypoint {
+    void* ptr;
+
+    template<typename T>
+    operator T*(void) const {
+      return static_cast<T*>(ptr);
+    }
+  };
+
   /// <summary>
   /// Finds an entrypoint with the specified name
   /// </summary>
   /// <returns>
   /// The address, or nullptr if it was not found
   /// </returns>
-  virtual void* Find(const char* name) const = 0;
+  virtual entrypoint Find(const char* name) const = 0;
 };

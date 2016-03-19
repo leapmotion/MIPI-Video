@@ -13,5 +13,5 @@ private:
 
 public:
   // Base class overrides:
-  void* Find(const char* name) const override;
+  entrypoint Find(const char* name) const override;
 };

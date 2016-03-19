@@ -23,6 +23,6 @@ std::unique_ptr<LeapLibrary> LeapLibrary::New(const char* libname) {
   }
 }
 
-void* LeapLibraryWin::Find(const char* name) const {
-  return GetProcAddress(m_hLib, name);
+LeapLibrary::entrypoint LeapLibraryWin::Find(const char* name) const {
+  return{ GetProcAddress(m_hLib, name) };
 }
