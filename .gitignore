@@ -24,7 +24,6 @@ CPackSourceConfig.cmake
 autowiring-config.cmake
 autowiring-configVersion.cmake
 install_manifest_*.txt
-*.cmake
 Testing
 DartConfiguration.tcl
 autowiring-*-*.dmg
@@ -41,5 +40,7 @@ win64/Autowiring.nuspec
 Autowiring.nuspec
 .kdev4
 autowiring.kdev4
-
 *.opendb
+
+src/CTestTestfile.cmake
+CTestTestfile.cmake
