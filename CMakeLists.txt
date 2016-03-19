@@ -8,6 +8,7 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake-modules")
 include(AddPCH)
 include(CTest)
 include(CheckTypeSize)
+include(ConditionalSources)
 
 add_subdirectory(contrib)
 add_subdirectory(src)
