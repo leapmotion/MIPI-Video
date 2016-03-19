@@ -18,7 +18,7 @@ public:
   /// </returns>
   static std::unique_ptr<LeapLibrary> New(const char* libname);
 
-private:
+protected:
   std::string libname;
 
 public:

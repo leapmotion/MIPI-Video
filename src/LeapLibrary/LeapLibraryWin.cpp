@@ -4,7 +4,7 @@
 LeapLibraryWin::LeapLibraryWin(std::string&& libname) :
   LeapLibrary(std::move(libname))
 {
-  m_hLib = LoadLibrary(libname.c_str());
+  m_hLib = LoadLibrary(this->libname.c_str());
   if (!m_hLib)
     throw std::runtime_error("Could not find the specified library");
 }
